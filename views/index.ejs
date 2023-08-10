@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-1:CRUD</title>
+</head>
+<body>
+    
+    <!-- Including header -->
+    <%-include('templates/_header')%>
+    <!-- end Including header -->
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-user" class="border-shadow">
+                    <span class="text-gradient">New User <i class="fas fa-user"></i></span>
+                </a>
+            </div>
+
+                <!-- form handling -->
+                <form action="/" method="POST">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>@Email</th>
+                                <th>Gender</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%- include('templates/_show')%>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </main>
+    <!-- /Main Site -->
+
+      <!-- Including footer -->
+      <% -include('templates/_footer')%>
+      <!-- end Including footer -->
+</body>
+</html>
